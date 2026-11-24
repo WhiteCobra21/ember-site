@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500&display=swap');
+
+:root {
+  --bg: #fbf6f1;
+  --surface: #ffffff;
+  --text: #2e1a2a;
+  --muted: #7a6573;
+  --plum: #5b2a4e;
+  --blush: #e9afb4;
+  --blush-soft: #f9e3e2;
+  --border: #eddad8;
+  --on-plum: #fff8f4;
+  --on-plum-muted: #e6cedc;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1218;
+    --surface: #271a23;
+    --text: #f7edea;
+    --muted: #c0aab8;
+    --plum: #3e2138;
+    --blush: #e8a9b0;
+    --blush-soft: #3d2833;
+    --border: #3e2b38;
+    --on-plum: #f7edea;
+    --on-plum-muted: #d8bfce;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.65 Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+a { color: inherit; text-decoration-color: var(--blush); text-underline-offset: 3px; }
+
+.hero {
+  max-width: 760px;
+  margin: 16px auto 0;
+  padding: 40px 28px 36px;
+  border-radius: 32px;
+  color: var(--on-plum);
+  background:
+    radial-gradient(circle at 95% 0%, rgba(233, 175, 180, 0.45), transparent 55%),
+    radial-gradient(circle at 0% 110%, rgba(233, 175, 180, 0.22), transparent 50%),
+    var(--plum);
+}
+@media (max-width: 792px) { .hero { margin: 16px 16px 0; } }
+.brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  text-decoration: none; font: 600 20px Fraunces, Georgia, serif;
+}
+h1, h2 { font-family: Fraunces, Georgia, serif; font-weight: 600; line-height: 1.2; }
+h1 { font-size: clamp(32px, 7vw, 44px); margin: 28px 0 8px; letter-spacing: -0.5px; }
+.lede { margin: 0; color: var(--on-plum-muted); font-size: 18px; }
+.updated { margin: 16px 0 0; color: var(--on-plum-muted); font-size: 14px; }
+
+main { max-width: 760px; margin: 0 auto; padding: 8px 28px 24px; }
+section { padding-top: 12px; }
+h2 { font-size: 23px; margin: 28px 0 8px; }
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+.summary {
+  margin-top: 24px; padding: 4px 24px 12px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 24px;
+}
+.fill { background: var(--blush-soft); border-radius: 6px; padding: 0 4px; }
+footer {
+  max-width: 760px; margin: 0 auto; padding: 24px 28px 48px;
+  color: var(--muted); font-size: 14px; border-top: 1px solid var(--border);
+}
